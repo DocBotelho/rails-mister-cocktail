@@ -1,2 +1,9 @@
 <h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<hr>
+<p><%= link_to "All Cocktails", cocktails_path, class: "btn btn-primary" %></p>
+<hr>
+<p><%= @cocktail.name %></p>
+<hr>
+<hr>
+<p><%= link_to "Add Dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %></p>
+<p><%= link_to "See Doses", cocktail_doses_path(@cocktail), class: "btn btn-primary" %></p>
