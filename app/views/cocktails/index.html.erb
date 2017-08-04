@@ -3,10 +3,12 @@
 <%= link_to "Add Cocktail", new_cocktail_path, class: "btn btn-primary" %>
 <hr>
 <% @cocktails.each do |cocktail| %>
+
+  <% unless cocktail.photo.blank? %>
+  <%= cl_image_tag cocktail.photo, height: 50, width: 50, crop: :fill %>
+  <% end %>
+
   <p><%= link_to cocktail.name, cocktail_path(cocktail)  %></p>
   <hr>
 <% end %>
 
-<!-- app/views/pages/home.html.erb -->
-<%= cl_image_tag("z2x7gtas88rcsn3ns5v6",
-      width: 400, height: 300, crop: :fill) %>

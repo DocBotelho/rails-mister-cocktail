@@ -10,7 +10,7 @@ class DosesController < ApplicationController
   end
 
   def new
-    @ingredients = Ingredient.all
+    @ingredients = Ingredient.order(:name)
     @dose = Dose.new
   end
 
